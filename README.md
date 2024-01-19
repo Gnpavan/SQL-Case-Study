@@ -1,4 +1,4 @@
-## Case Study #1: Danny's Diner 
+## **Case Study 1: Danny's Diner:**
 <img src="https://user-images.githubusercontent.com/81607668/127727503-9d9e7a25-93cb-4f95-8bd0-20b87cb4b459.png" alt="Image" width="500" height="520">
 
 ### **Probelm Statement:**
@@ -10,9 +10,10 @@ Danny has provided you with a sample of his overall customer data due to privacy
 
 Danny has shared with you 3 key datasets for this case study:
 
-**sales
-menu
-members**
+**
+- sales
+- menu
+- members**
 You can inspect the entity relationship diagram and example data below.
 
 ### **Entity Relationship Diagram:**
