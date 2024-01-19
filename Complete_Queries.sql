@@ -189,3 +189,4 @@ From members as me
     Inner Join menu as m on m.product_id = s.product_id
 where s.order_date >= me.join_date and s.order_date <= CAST('2021-01-31' AS DATE)
 Group by s.customer_id
+
