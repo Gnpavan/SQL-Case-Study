@@ -52,8 +52,8 @@ With Rank as
 (
 Select S.customer_id, 
        M.product_name, 
-	     S.order_date,
-	     DENSE_RANK() OVER (PARTITION BY S.Customer_ID Order by S.order_date) as rank
+       S.order_date,
+       DENSE_RANK() OVER (PARTITION BY S.Customer_ID Order by S.order_date) as rank
 From Menu m
 Join Sales s
 On m.product_id = s.product_id
@@ -108,7 +108,7 @@ With rank as
 (
 Select S.customer_ID ,
        M.product_name, 
-	   Count(S.product_id) as Count,
+       Count(S.product_id) as Count,
        Dense_rank()  Over (Partition by S.Customer_ID order by Count(S.product_id) DESC ) as Rank
 From Menu m
 Join Sales s
@@ -141,7 +141,7 @@ With Rank as
 Select  S.customer_id,
         M.product_name,
         S.order_date,
-			  Dense_rank() OVER (Partition by S.Customer_id Order by S.Order_date) as Rank
+        Dense_rank() OVER (Partition by S.Customer_id Order by S.Order_date) as Rank
 From Sales S
 Join Menu M
 ON m.product_id = s.product_id
@@ -175,7 +175,7 @@ With Rank as
 Select  S.customer_id,
         M.product_name,
         S.Order_date,
-			  Dense_rank() OVER (Partition by S.Customer_id Order by S.Order_date DESC) as Rank
+        Dense_rank() OVER (Partition by S.Customer_id Order by S.Order_date DESC) as Rank
 From Sales S
 Join Menu M
 On m.product_id = s.product_id
@@ -235,7 +235,7 @@ With Points as
 (
 Select *, Case When product_id = 1 THEN price*20
                Else price*10
-			   End as Points
+               End as Points
 From Menu
 )
 Select S.customer_id, Sum(P.points) as Points
